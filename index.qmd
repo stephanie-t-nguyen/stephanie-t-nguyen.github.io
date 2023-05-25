@@ -2,10 +2,6 @@
 title: "stephanie-t-nguyen.github.io"
 ---
 
-This is a Quarto website.
+# Random Label
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+This is a Quarto Website
