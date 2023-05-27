@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -58,9 +60,38 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
 </head>
 
 <body class="nav-fixed">
@@ -89,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./project_workshop.html" aria-current="page">projects &amp; workshops</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html">resume</a>
+    <a class="nav-link" href="./github_website_resume.pdf">resume</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/stephanie-t-nguyen"><i class="bi bi-github" role="img">
@@ -117,10 +148,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects">Projects</a></li>
-  <li><a href="#workshops" id="toc-workshops" class="nav-link" data-scroll-target="#workshops">Workshops</a></li>
   </ul>
 </nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -143,15 +173,62 @@ ul.task-list li input[type="checkbox"] {
 <section id="projects" class="level3">
 <h3 class="anchored" data-anchor-id="projects">Projects</h3>
 <p>~coding projects~</p>
-</section>
-<section id="workshops" class="level3">
-<h3 class="anchored" data-anchor-id="workshops">Workshops</h3>
-<p>~a selection of my favorite workshops~</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1684911600000" data-listing-file-modified-sort="1685138762044" data-listing-reading-time-sort="5.985">
+<a href="./project_workshop/ENVS 193DS Homework 4/ENVS-193DS_homework-04_Nguyen_Stephanie/code/homework_4_code.docx" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Homework 4
+</h5>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Stephanie Nguyen
+</div>
+<div class="listing-date">
+May 24, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1668758400000" data-listing-file-modified-sort="1685166879994" data-listing-reading-time-sort="46.765">
+<a href="./project_workshop/ENVS 193SW Final/code/Nguyen_Stephanie_final_project.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Nguyen_Stephanie_final_project
+</h5>
+<div class="card-text listing-description">
+<strong>Data Sources: Data on Country GDP are available from The World Bank (2000-2020).</strong> <strong>Data on country water access are avaliable from UNICEF (2000-2020).</strong>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Stephanie Nguyen
+</div>
+<div class="listing-date">
+Nov 18, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

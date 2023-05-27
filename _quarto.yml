@@ -10,7 +10,8 @@ website:
         text: home
       - about.qmd
       - project_workshop.qmd
-      - resume.qmd
+      - href: github_website_resume.pdf
+        text: resume
       - icon: github 
         href: https://github.com/stephanie-t-nguyen
       - icon: linkedin
@@ -18,9 +19,9 @@ website:
 
 format:
   html:
-    theme: minty
-    css: styles.css
-    page-layout: full
+    theme: 
+      - mystyles.scss
+    mainfont: Source+Sans+Pro
     toc: true
 
 editor: visual

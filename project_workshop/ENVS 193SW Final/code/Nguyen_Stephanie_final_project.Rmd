@@ -1,0 +1,347 @@
+---
+title: "Nguyen_Stephanie_final_project"
+author: "Stephanie Nguyen"
+date: "2022-11-18"
+output: html_document
+---
+
+#### Step #1: Set global options and load packages
+
+```{r setup, include = FALSE, warning = FALSE, messages = FALSE, errors = TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)                                                              #Load tidyverse
+library(here)                                                                   #Load here
+library(janitor)                                                                #Load janitor
+library(readxl)                                                                 #Load readxl
+library(stringr)                                                                #Load stringr
+
+#install.packages("plotly")                                                     #Install plotly
+library(plotly)                                                                 #Load plotly
+
+#install.packages("gganimate")                                                  #Install gganimate
+library(gganimate)                                                              #Load gganimate
+
+#install.packages("gapminder")                                                  #Install gapminder
+library(gapminder)                                                              #Load gapminder
+
+#install.packages("gifski")                                                     #Install gifski
+library(gifski)                                                                 #Load gifski
+
+#install.packages("base")                                                       #Install base
+library(base)                                                                   #Load Base
+
+#install.packages("ggrepel")                                                    #Install ggrepel
+library(ggrepel)                                                                #Load ggrepel
+
+#install.packages("scales")                                                     #Install scales   
+library(scales)                                                                 #Load scales
+
+
+```
+
+#### Step #2: Import water use data; clean data
+
+**Data Sources: Data on Country GDP are available from [The World Bank](https://data.worldbank.org/indicator/ny.gdp.pcap.cd?end=2021&start=2000) (2000-2020).** **Data on country water access are avaliable from [UNICEF](https://data.unicef.org/resources/data_explorer/unicef_f/?ag=UNICEF&df=GLOBAL_DATAFLOW&ver=1.0&dq=.WS_PPL_W-UI+WS_PPL_W-QUA+WS_PPL_W-L+WS_PPL_W-I+WS_PPL_W-B+WS_PPL_W-ALB+WS_PPL_W-SM..&startPeriod=1980&endPeriod=2020) (2000-2020).**
+
+```{r, warning = FALSE, message = FALSE, error = FALSE}
+
+#Read data for country by continents 
+continent <- gapminder |>                                                       #Load gapminder, gapminder is an R library
+  clean_names() |>                                                              #Clean column names
+  select(c(country_name = "country", "continent")) |>                           #Select wanted columns
+  distinct(.keep_all = TRUE)  |>                                                #Keep non-repeating columns
+  add_row(country_name = "Moldova", continent = "Europe") |>                    #Add missing country
+  add_row(country_name = "Virgin Islands (U.S.)", continent = "Americas") |>    #Add missing country
+  add_row(country_name = "Laos", continent = "Asia") |>                         #Add missing country
+  add_row(country_name = "Kyrgyzstan", continent = "Asia") |>                   #Add missing country
+  add_row(country_name = "United Arab Emirates", continent = "Asia") |>         #Add missing country
+  add_row(country_name = "Vanuatu", continent = "Oceania") |>                   #Add missing country
+  add_row(country_name = "Uzbekistan", continent = "Asia") |>                   #Add missing country
+  add_row(country_name = "Ukraine", continent = "Europe") |>                    #Add missing country
+  add_row(country_name = "Tajikistan", continent = "Asia") |>                   #Add missing country
+  add_row(country_name = "Suriname", continent = "Americas") |>                 #Add missing country
+  add_row(country_name = "Tuvalu", continent = "Oceania") |>                    #Add missing country
+  add_row(country_name = "Bahamas", continent = "Americas") |>                  #Add missing country
+  add_row(country_name = "Turkmenistan", continent = "Asia") |>                 #Add missing country
+  add_row(country_name = "Tonga", continent = "Oceania") |>                     #Add missing country
+  add_row(country_name = "Timor-Leste", continent = "Asia") |>                  #Add missing country
+  add_row(country_name = "South Sudan", continent = "Africa") |>                #Add missing country
+  add_row(country_name = "Monaco", continent = "Europe") |>                     #Add missing country
+  add_row(country_name = "Armenia", continent = "Asia") |>                      #Add missing country
+  add_row(country_name = "Antigua and Barbuda", continent = "Americas") |>      #Add missing country
+  add_row(country_name = "Russia", continent = "Europe") |>                     #Add missing country
+  mutate(country_name = str_replace_all(country_name, c(                        #Rename countries for consistency
+    "Congo, Rep." = "Congo", 
+    "Czech Republic" = "Czechia",
+    "Korea, Rep." = "South Korea",
+    "Hong Kong, China" = "Hong Kong",
+    "Slovak Republic" = "Slovakia",
+    "Swaziland" = "Eswatini",
+    "Yemen, Rep." = "Yemen"
+    ))) |>
+  filter(!country_name %in% c("Korea, Dem. Rep.",                               #Filter out repeating columns
+                              "Congo, Dem. Rep."))
+
+#Read data for country GDP per capita
+GDP <- read_excel(here("data/GDP_per_capita.xlsx")) |>                          #Load GDP per capita data
+  clean_names() |>                                                              #Clean column names
+  subset(select = -c(series_code, country_code, x2021_yr2021)) |>               #Take out unnecessary columns
+  pivot_longer(cols = 3:23,                                                     #Pivot table longer for year column
+               names_to = "year",
+               values_to = "GDP_per_capita_USD") |> 
+  mutate(year = str_sub(year, start = 2, end = -8)) |>                          #Clean year labels
+  mutate_at(vars(4),                                                            #Coerce data into numerics
+            as.numeric,
+            na.rm = TRUE) |>
+  slice(1:4557) |>                                                              #Remove non-country rows
+    mutate(country_name = str_replace_all(country_name, c(                      #Rename countries for consistency
+    "Bahamas, The" = "Bahamas",
+    "Congo, Dem. Rep." = "Congo",
+    "Egypt, Arab Rep." = "Egypt",
+    "Gambia, The" = "Gambia",
+    "Hong Kong SAR, China" = "Hong Kong",
+    "Korea, Rep." = "South Korea",
+    "Iran, Islamic Rep." = "Iran",
+    "Lao PDR" = "Laos",
+    "Kyrgyz Republic" = "Kyrgyzstan",
+    "Russian Federation" = "Russia",
+    "Slovak Republic" = "Slovakia",
+    "Syrian Arab Republic" = "Syria",
+    "Turkiye" = "Turkey",
+    "Venezuela, RB" = "Venezuela",
+    "Yemen, Rep." = "Yemen"
+    ))) |> 
+  filter(!country_name %in% c("Korea, Dem. People's Rep."))                     #Remove repeating country
+  
+#Read data for country population
+pop <- read_excel(here("data/world_pop.xlsx")) |>                               #Load population data
+  clean_names() |>                                                              #Clean column names
+  subset(select = -c(country_code, series_code)) |>                             #Take out unnecessary columns
+  pivot_longer(cols = 3:23,                                                     #Pivot table longer for years column
+               names_to = "year",
+               values_to = "population") |>
+  mutate(year = str_sub(year, start = 2, end = -8)) |>                          #Clean year labels
+  mutate_at(vars(4),                                                            #Coerce data into numerics
+            as.numeric, 
+            na.rm = TRUE) |>
+  slice(1:5586) |>                                                              #Remove non-country rows
+    mutate(country_name = str_replace_all(country_name, c(                      #Rename countries for consistency
+    "Bahamas, The" = "Bahamas",
+    "Congo, Dem. Rep." = "Congo",
+    "Czech Republic" = "Czechia",
+    "Egypt, Arab Rep." = "Egypt",
+    "Gambia, The" = "Gambia",
+    "Hong Kong SAR, China" = "Hong Kong",
+    "Korea, Rep." = "South Korea",
+    "Iran, Islamic Rep." = "Iran",
+    "Lao PDR" = "Laos",
+    "Kyrgyz Republic" = "Kyrgyzstan",
+    "Russian Federation" = "Russia",
+    "Slovak Republic" = "Slovakia",
+    "Syrian Arab Republic" = "Syria",
+    "Turkiye" = "Turkey",
+    "Venezuela, RB" = "Venezuela",
+    "Yemen, Rep." = "Yemen"
+    ))) |>
+  filter(!country_name %in% c("Korea, Dem. People's Rep."))                     #Remove repeating country
+  
+
+#Read data for country water access 
+water_access <- read_excel(here("data/drinking_water_access.xlsx")) |>          #Load water access data
+  mutate_at(vars(5),                                                            #Coerce data into numeric
+            as.numeric,
+            na.rm = TRUE) |>
+  clean_names() |>                                                              #Clean column names
+  select(c(country_name = "geographic_area",                                    #Select relevant columns
+           "indicator", 
+           year = "time_period", 
+           percentage_w_wa = "obs_value")) |>
+  filter(indicator %in% c(                                                      #Define access to water
+    "Proportion of population using at least basic drinking water services"
+  )) |>
+  slice(1:5363) |>                                                              #Remove non-country rows
+  mutate(country_name = str_replace_all(country_name, c(                        #Rename countries for consistency
+    "Democratic Republic of the Congo" = "Congo",
+    "Viet Nam" = "Vietnam",
+    "Democratic People's Republic of Korea" = "South Korea",
+    "China, Hong Kong Special Administrative Region" = "Hong Kong",
+    "Lao People's Democratic Republic" = "Laos",
+    "Republic of Moldova" = "Moldova",
+    "Russian Federation" = "Russia",
+    "Syrian Arab Republic" = "Syria",
+    "United Republic of Tanzania" = "Tanzania",
+    "The Republic of Turkey" = "Turkey",
+    "Venezuela (Bolivarian Republic of)" = "Venezuela",
+    "Virgin Islands U.S." = "Virgin Islands (U.S.)"))) 
+```
+
+**Q1: What data are you using?** I will be using data on countries' water access and countries' GDP.
+
+**Q2: Where are the data from?** The data on countries' water access is from UNICEF, while the data on countries' GDP and population are from The World Bank.
+
+**Q3: Using these data, what figures will you make?** My first plot will be a time series analysis of countries by their GDP and access to drinking water. Both data tables have data on countries from the years 1988 to 2017. My vision for the first plot is to graph "country GDP" by "proportion of population with access to basic drinking water" in a scatter plot, labeling each dot representing the country. For the time series aspect, I am hoping to make multiple plots to form an animation that shows how access to drinking water changes over the years along with a country's GDP.
+
+**Q4: What is the main point of each of your figures?** The main point of my first figure is to observe if and how water access correlates to country GDP.
+
+**Q5: Why did you choose the data that you chose? Why did you choose the topic that you choose?** I chose data from UNICEF because it was readily available and easy to query. The UNICEF website had options for me to choose what definitions of "access to water" I wanted, as well as what countries and years I wanted data from. For data on countries' wealth, I chose data from the World Bank because although other websites had data on countries' GDP, The World Bank was the only one I found find that was not only downloadable onto Excel, but also had data on the countries' GDP per capita throughout time. I chose this topic because I thought it would be interesting to see if GDP does correlate with improved water access, as people in nations often don't gain access to the growing wealth of their countries.
+
+**Q6: In what ways are you hoping this project challenges you?** I am hoping this project challenges me to improve my debugging, documentation interpretation, and Google searching skills when it comes to coding. I foresee challenges in meshing my two data tables, since they are formatted very differently. I also foresee challenges with making the animation and graph aesthetically appealing when there are so many variables to depict.
+
+#### Step #3: Organize data for Plot 1: Drinking Water Access vs GDP per Capita
+
+```{r, errors = FALSE, warning = FALSE}
+#Find mismatched names that will affect inner join with data 
+mismatch_names <- full_join(pop, GDP, by = c("country_name", "year")) |>        #Full join pop and GDP
+  select(-c("series_name.x", "series_name.y")) |>                               #Remove unnecessary columns
+  full_join(water_access, 
+            by = c("year", "country_name")) |>                                  #Full join data with water_access
+  select(-c("indicator")) |>                                                    #Remove unnecessary column
+  full_join(continent,                                                          #Full join data with continent
+            by = c("country_name")) |>
+  filter(!grepl("income|dividend|Europe|IDA|Saint|Asia|East|Sint Maarten|union|French|Island|Region|Samoa|Bonaire|mall",  #Filter out rows containing common strings
+                country_name)) |> 
+  filter(!country_name %in% c("Africa Western and Central",                     #Filter out specific strings
+                              "Arab World",
+                              "Andorra",
+                              "Anguilla",
+                              "Australia and New Zealand",
+                              "Congo, Rep.",
+                              "Euro area",
+                              "Fragile and conflict affected situations",
+                              "Guadeloupe",
+                              "Heavily indebted poor countries (HIPC)",
+                              "IBRD only",
+                              "Landlocked developing countries (LLDCs)",
+                              "Latin America & Caribbean",
+                              "Latin America & the Caribbean",
+                              "Latin America and Caribbean",
+                              "Least developed countries: UN classification",
+                              "Least developed countries",
+                              "Martinique",
+                              "Mayotte",
+                              "Montserrat",
+                              "Niue",
+                              "North America",
+                              "Not classified",
+                              "Oceania excluding Australia and New Zealand",
+                              "OECD members",
+                              "Republic of Korea",
+                              "San Marino",
+                              "SDG regions - Global",
+                              "Sub-Saharan Africa",
+                              "World",
+                              "Africa",
+                              "Americas",
+                              "Taiwan",
+                              "Tokelau",
+                              "Wallis and Futuna",
+                              "West and Central Africa",
+                              "West Bank and Gaza",
+                              "Western Pacific")) 
+
+#Find countries with full data for every year 2000-2020
+full_country_data <- mismatch_names |>                                          #Load mismatch_names 
+  na.omit() |>                                                                  #Omit rows with na
+  mutate_at(vars(2),                                                            #Coerce year into integer
+            as.integer,
+            na.rm = TRUE) |>
+  group_by(country_name) |>                                                     #Group by country name
+  summarize_at(1, sum, na.rm = TRUE) |>                                         #Sum up years
+  ungroup() |>                                                                  #Ungroup
+  filter(!year < 42210)                                                         #Select countries with complete data for all years 
+
+final_df <- mismatch_names |>                                                   #Load mismatch_names
+  inner_join(full_country_data,                                                 #Inner join with countries with full data
+             by = "country_name") |>
+  select(c(country_name,                                                        #Select relevant columns
+           year = "year.x",
+           population,
+           GDP_per_capita_USD,
+           percentage_w_wa,
+           continent)) |>
+  mutate_at(vars(3:5),                                                          #Coerce data into numerics
+            as.numeric,
+            na.rm = TRUE) |>
+  mutate_at(vars(2),                                                            #Coerce year into integer
+            as.integer,
+            na.rm = TRUE)
+```
+
+#### Step #4: Plot timeseries ggplot
+
+```{r, errors = FALSE, fig.width = 10.1, fig.height = 4.7}
+
+final <- ggplot() +                                                             #Create ggplot
+  
+  geom_point(                                                                   #Create point plot
+    data = final_df,                                                            #Load final_df
+    aes(x = GDP_per_capita_USD,                                                 #Set aesthetics
+    y = percentage_w_wa,
+    size = population/1000000,                                                  #Turn point into bubble plot
+    colour = continent),                                                        #Sort continents by color
+    alpha = 0.7) +                                                              #Make bubbles opaque
+  
+  transition_time(year) +                                                       #Change data by years
+  
+  scale_size(                                                                   #Edit population legend
+    range = c(2,20),                                                            #Set scale of bubble size
+    name = "Population",                                                        #Rename population legend
+    breaks = c(250, 500, 1000),                                                 #Change to 3 breaks
+    labels = c("250 million", "500 million", "1000 million")) +                 #Add "million" to legend
+  
+  scale_colour_discrete(                                                        #Edit continent legend
+    "Continents") +                                                             #Capitalize continents
+
+  labs(                                                                         #Edit labels
+       title = " Drinking Water Access vs GDP per Capita",                      #Add title
+       subtitle = "          Year: {frame_time}",                               #Add subtitle
+       x = "GDP per capita (US Dollars)",                                       #Label x axis
+       y = "Percentage of population with access to drinking water",            #Label y axis
+       fill = "",
+       caption = "Figure 1: Percentage of country population with access to drinking water by GDP per capita. Data from UNICEF and The World Bank.") +
+  
+  theme_classic() +                                                             #Use classic theme
+  
+  theme(                                                                        #Edit plot theme
+        plot.title = element_text(hjust = 0, size = 30),       
+        plot.caption = element_text(color = "black", hjust = -0.05, 
+                                    vjust = -1.3, size = 15),
+        plot.caption.position = "plot",
+        plot.subtitle = element_text(color = "gray71", hjust = -0.1,
+                                     size = 25, face = "bold"),
+        legend.position = "right",
+        legend.title = element_text(color = "gray71", size = 20),
+        legend.text = element_text(color = "gray71", size = 15),
+        axis.text = element_text(color = "black", size = 22),
+        axis.title.x = element_text(size = 15, vjust = -0.5, face = "bold"),
+        axis.title.y = element_text(size = 15, face = "bold"),
+        axis.ticks = element_blank(),
+        axis.line = element_line(linetype = "solid", color = "lightgrey"),
+        panel.grid.major = element_line(linetype = "longdash", color = "lightgrey")) +
+  
+  guides(color = guide_legend(override.aes = list(size = 7, shape = 15),        #Set size and shape of legend continent bubble
+                              color = "lightgrey")) +   
+        
+  scale_x_log10(                                                                #Make data more spread out via x axis
+        breaks = c(100, 300, 1000, 3000, 10000, 30000, 100000),                 #Evenly space ticks
+        labels = c("$100", "$300", "$1,000", "$3,000", "$10,000",               #Add $ and commas to axis label
+                   "$30,000", "$100,000")) + 
+  
+  scale_y_continuous(                                                           #Make continuous y axis
+    breaks = c(20, 40, 60, 80, 100),
+    labels = c("20%", "40%", "60%", "80%", "100%")) 
+
+
+animate(                                                                        #Create animation
+        final, nframes = 90,                                                    #Set number of frames
+        renderer = gifski_renderer("GDP_water_access.gif"),                     #Name gif
+        height = 780, width = 1000)                                             #Set dimensions
+
+```
+
+**Q1: What is the take home message of this figure?** The take home message of this figure is that country GDP tends to be correlated with access to drinking water. The graph implies a positive relationship between country per capita wealth and the percentage of the population with drinking water.
+
+**Q2: What is the most (or least) surprising?** The most surprising thing to me was the wealth gap between countries. Initially, without the log scale, I could barely tell what was going on in the data; all the poor countries were clustered on the y axis, while the richer countries were clustered at the top of the graph. Another surprising observation was how the country's continent appears to be highly associated with its assess to drinking water. Even for countries of similar GDP's, African countries tend to have less access to drinking water than its Asian or American equivalent.
+
+**Q3: What three new functions did you implement to support visualization of the data? Explain what each of them does.** (1) I learned the scale_x\_log10() function, which sets the x axis to a log scale instead of a continuous scale. This aided in the data visualization because the wealth gap between countries is so great that all the data would be clustered either on the y axis or the top of the graph if it was on a regular x axis. Thus, the log scale allows us to see the spread of the data better. (2) I also learned the animate() function, which allows you to make a gif of the plot, and the transition_time() function, that allowed me to animate the plot based on changing years, so you can see how countries' access to drinking water and GDP change year by year. (3) In terms of data cleaning, the na.omit() function was useful in filtering out countries with missing data. If a country had missing data, it would appear and/or disappear at random points on the animation, so to avoid a visual confusing, I used na.omit() to take out countries with missing data. I also learned the distinct() function that allowed me to filter out repeating rows and the full_join() function that allowed me to join all the data together and see what rows had missing data at the bottom of the dataframe.
