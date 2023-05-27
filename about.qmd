@@ -1,9 +1,17 @@
 ---
-title: "About"
+title: "about"
 ---
 
-About this site
+\~more about me outside of my career goals\~
 
-```{r}
-1 + 1
-```
+### Identity
+
+I am a proud first-generation, Vietnamese-American college graduate.
+
+### Cooking
+
+Cooking is one of my favorite pass times. Food is not just a means of living, but it is integral to cultural, community, and relationships. Here are my proudest dishes I have made so far.
+
+### Games
+
+I love all types of games - video games, board games, and sports!

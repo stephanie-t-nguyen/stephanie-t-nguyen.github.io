@@ -1,16 +1,44 @@
 [
   {
+    "objectID": "project_workshop.html",
+    "href": "project_workshop.html",
+    "title": "projects & workshops",
+    "section": "",
+    "text": "Workshops\n~a selection of my favorite workshops~"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "resume",
+    "section": "",
+    "text": "Here is my resume"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "stephanie-t-nguyen.github.io",
+    "title": "Stephanie Nguyen",
     "section": "",
-    "text": "This is a Quarto Website"
+    "text": "Hi there! I’m Stephanie. My professional goals are to support students, especially POC and first-gen students, in higher education. Outside of work, I love cooking, playing tennis, and learning languages!"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Stephanie Nguyen",
+    "section": "Education",
+    "text": "Education\nUniversity of California, Santa Barbara | Santa Barbara, CA\nB.S. in Environmental Studies, B.S. in Biological Sciences | Aug 2019 - Jun 2023"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Stephanie Nguyen",
+    "section": "Experience",
+    "text": "Experience\nCollege Chemistry Tutor | Campus Learning Assitance Services (CLAS) | Aug 2022 - Jun 2023\nPeer Mentor | ONDAS First-Gen Students Center | Aug 2020 - Jun 2023"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "about",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "Identity\nI am a proud first-generation, Vietnamese-American college graduate.\n\n\nCooking\nCooking is one of my favorite pass times. Food is not just a means of living, but it is integral to cultural, community, and relationships. Here are my proudest dishes I have made so far.\n\n\nGames\nI love all types of games - video games, board games, and sports!"
   }
 ]

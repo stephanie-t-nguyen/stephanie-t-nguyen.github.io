@@ -1,7 +1,27 @@
 ---
-title: "stephanie-t-nguyen.github.io"
+title: "Stephanie Nguyen"
+about: 
+  template: trestles
+  image: Stephanie Nguyen.png
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/stephanie-t-nguyen
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/stephanie0nguyen/
 ---
 
-# Random Label
+Hi there! I'm Stephanie. My professional goals are to support students, especially POC and first-gen students, in higher education. Outside of work, I love cooking, playing tennis, and learning languages!
 
-This is a Quarto Website
+## Education
+
+**University of California, Santa Barbara** \| Santa Barbara, CA
+
+B.S. in Environmental Studies, B.S. in Biological Sciences \| Aug 2019 - Jun 2023
+
+## Experience
+
+**College Chemistry Tutor** \| Campus Learning Assitance Services (CLAS) \| Aug 2022 - Jun 2023
+
+**Peer Mentor** \| ONDAS First-Gen Students Center \| Aug 2020 - Jun 2023
