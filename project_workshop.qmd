@@ -2,7 +2,9 @@
 title: "projects & workshops"
 editor: visual
 listing:
-  contents: project_workshop
+  contents: 
+    - "Nguyen_Stephanie_final_project.html"
+    - "homework_4_code.docx"
   feed: true
   sort: "date desc"
   type: grid
