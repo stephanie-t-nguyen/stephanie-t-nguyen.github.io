@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephanie Nguyen">
+<meta name="dcterms.date" content="2022-11-18">
+
+<title>Stephanie Nguyen - Nguyen_Stephanie_final_project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Stephanie Nguyen</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html">home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">about</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../project_workshop.html">projects &amp; workshops</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../github_website_resume.pdf">resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/stephanie-t-nguyen"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/stephanie0nguyen/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Nguyen_Stephanie_final_project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephanie Nguyen </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 18, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="step-1-set-global-options-and-load-packages" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-set-global-options-and-load-packages">Step #1: Set global options and load packages</h4>
+</section>
+<section id="step-2-import-water-use-data-clean-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-import-water-use-data-clean-data">Step #2: Import water use data; clean data</h4>
+<p><strong>Data Sources: Data on Country GDP are available from <a href="https://data.worldbank.org/indicator/ny.gdp.pcap.cd?end=2021&amp;start=2000">The World Bank</a> (2000-2020).</strong> <strong>Data on country water access are avaliable from <a href="https://data.unicef.org/resources/data_explorer/unicef_f/?ag=UNICEF&amp;df=GLOBAL_DATAFLOW&amp;ver=1.0&amp;dq=.WS_PPL_W-UI+WS_PPL_W-QUA+WS_PPL_W-L+WS_PPL_W-I+WS_PPL_W-B+WS_PPL_W-ALB+WS_PPL_W-SM..&amp;startPeriod=1980&amp;endPeriod=2020">UNICEF</a> (2000-2020).</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Read data for country by continents </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>continent <span class="ot">&lt;-</span> gapminder <span class="sc">|&gt;</span>                                                       <span class="co">#Load gapminder, gapminder is an R library</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span>                                                              <span class="co">#Clean column names</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(<span class="at">country_name =</span> <span class="st">"country"</span>, <span class="st">"continent"</span>)) <span class="sc">|&gt;</span>                           <span class="co">#Select wanted columns</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(<span class="at">.keep_all =</span> <span class="cn">TRUE</span>)  <span class="sc">|&gt;</span>                                                <span class="co">#Keep non-repeating columns</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Moldova"</span>, <span class="at">continent =</span> <span class="st">"Europe"</span>) <span class="sc">|&gt;</span>                    <span class="co">#Add missing country</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Virgin Islands (U.S.)"</span>, <span class="at">continent =</span> <span class="st">"Americas"</span>) <span class="sc">|&gt;</span>    <span class="co">#Add missing country</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Laos"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                         <span class="co">#Add missing country</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Kyrgyzstan"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                   <span class="co">#Add missing country</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"United Arab Emirates"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>         <span class="co">#Add missing country</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Vanuatu"</span>, <span class="at">continent =</span> <span class="st">"Oceania"</span>) <span class="sc">|&gt;</span>                   <span class="co">#Add missing country</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Uzbekistan"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                   <span class="co">#Add missing country</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Ukraine"</span>, <span class="at">continent =</span> <span class="st">"Europe"</span>) <span class="sc">|&gt;</span>                    <span class="co">#Add missing country</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Tajikistan"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                   <span class="co">#Add missing country</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Suriname"</span>, <span class="at">continent =</span> <span class="st">"Americas"</span>) <span class="sc">|&gt;</span>                 <span class="co">#Add missing country</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Tuvalu"</span>, <span class="at">continent =</span> <span class="st">"Oceania"</span>) <span class="sc">|&gt;</span>                    <span class="co">#Add missing country</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Bahamas"</span>, <span class="at">continent =</span> <span class="st">"Americas"</span>) <span class="sc">|&gt;</span>                  <span class="co">#Add missing country</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Turkmenistan"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                 <span class="co">#Add missing country</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Tonga"</span>, <span class="at">continent =</span> <span class="st">"Oceania"</span>) <span class="sc">|&gt;</span>                     <span class="co">#Add missing country</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Timor-Leste"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                  <span class="co">#Add missing country</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"South Sudan"</span>, <span class="at">continent =</span> <span class="st">"Africa"</span>) <span class="sc">|&gt;</span>                <span class="co">#Add missing country</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Monaco"</span>, <span class="at">continent =</span> <span class="st">"Europe"</span>) <span class="sc">|&gt;</span>                     <span class="co">#Add missing country</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Armenia"</span>, <span class="at">continent =</span> <span class="st">"Asia"</span>) <span class="sc">|&gt;</span>                      <span class="co">#Add missing country</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Antigua and Barbuda"</span>, <span class="at">continent =</span> <span class="st">"Americas"</span>) <span class="sc">|&gt;</span>      <span class="co">#Add missing country</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_row</span>(<span class="at">country_name =</span> <span class="st">"Russia"</span>, <span class="at">continent =</span> <span class="st">"Europe"</span>) <span class="sc">|&gt;</span>                     <span class="co">#Add missing country</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country_name =</span> <span class="fu">str_replace_all</span>(country_name, <span class="fu">c</span>(                        <span class="co">#Rename countries for consistency</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Congo, Rep."</span> <span class="ot">=</span> <span class="st">"Congo"</span>, </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Czech Republic"</span> <span class="ot">=</span> <span class="st">"Czechia"</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Korea, Rep."</span> <span class="ot">=</span> <span class="st">"South Korea"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hong Kong, China"</span> <span class="ot">=</span> <span class="st">"Hong Kong"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Slovak Republic"</span> <span class="ot">=</span> <span class="st">"Slovakia"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Swaziland"</span> <span class="ot">=</span> <span class="st">"Eswatini"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Yemen, Rep."</span> <span class="ot">=</span> <span class="st">"Yemen"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    ))) <span class="sc">|&gt;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>country_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Korea, Dem. Rep."</span>,                               <span class="co">#Filter out repeating columns</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Congo, Dem. Rep."</span>))</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">#Read data for country GDP per capita</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>GDP <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">"data/GDP_per_capita.xlsx"</span>)) <span class="sc">|&gt;</span>                          <span class="co">#Load GDP per capita data</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span>                                                              <span class="co">#Clean column names</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">subset</span>(<span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(series_code, country_code, x2021_yr2021)) <span class="sc">|&gt;</span>               <span class="co">#Take out unnecessary columns</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">23</span>,                                                     <span class="co">#Pivot table longer for year column</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"GDP_per_capita_USD"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">str_sub</span>(year, <span class="at">start =</span> <span class="dv">2</span>, <span class="at">end =</span> <span class="sc">-</span><span class="dv">8</span>)) <span class="sc">|&gt;</span>                          <span class="co">#Clean year labels</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(<span class="dv">4</span>),                                                            <span class="co">#Coerce data into numerics</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>            as.numeric,</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>            <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4557</span>) <span class="sc">|&gt;</span>                                                              <span class="co">#Remove non-country rows</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">country_name =</span> <span class="fu">str_replace_all</span>(country_name, <span class="fu">c</span>(                      <span class="co">#Rename countries for consistency</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bahamas, The"</span> <span class="ot">=</span> <span class="st">"Bahamas"</span>,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Congo, Dem. Rep."</span> <span class="ot">=</span> <span class="st">"Congo"</span>,</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Egypt, Arab Rep."</span> <span class="ot">=</span> <span class="st">"Egypt"</span>,</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Gambia, The"</span> <span class="ot">=</span> <span class="st">"Gambia"</span>,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hong Kong SAR, China"</span> <span class="ot">=</span> <span class="st">"Hong Kong"</span>,</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Korea, Rep."</span> <span class="ot">=</span> <span class="st">"South Korea"</span>,</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Iran, Islamic Rep."</span> <span class="ot">=</span> <span class="st">"Iran"</span>,</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lao PDR"</span> <span class="ot">=</span> <span class="st">"Laos"</span>,</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kyrgyz Republic"</span> <span class="ot">=</span> <span class="st">"Kyrgyzstan"</span>,</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Russian Federation"</span> <span class="ot">=</span> <span class="st">"Russia"</span>,</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Slovak Republic"</span> <span class="ot">=</span> <span class="st">"Slovakia"</span>,</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Syrian Arab Republic"</span> <span class="ot">=</span> <span class="st">"Syria"</span>,</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Turkiye"</span> <span class="ot">=</span> <span class="st">"Turkey"</span>,</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Venezuela, RB"</span> <span class="ot">=</span> <span class="st">"Venezuela"</span>,</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Yemen, Rep."</span> <span class="ot">=</span> <span class="st">"Yemen"</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    ))) <span class="sc">|&gt;</span> </span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>country_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Korea, Dem. People's Rep."</span>))                     <span class="co">#Remove repeating country</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co">#Read data for country population</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>pop <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">"data/world_pop.xlsx"</span>)) <span class="sc">|&gt;</span>                               <span class="co">#Load population data</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span>                                                              <span class="co">#Clean column names</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">subset</span>(<span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(country_code, series_code)) <span class="sc">|&gt;</span>                             <span class="co">#Take out unnecessary columns</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">23</span>,                                                     <span class="co">#Pivot table longer for years column</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"population"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">str_sub</span>(year, <span class="at">start =</span> <span class="dv">2</span>, <span class="at">end =</span> <span class="sc">-</span><span class="dv">8</span>)) <span class="sc">|&gt;</span>                          <span class="co">#Clean year labels</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(<span class="dv">4</span>),                                                            <span class="co">#Coerce data into numerics</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>            as.numeric, </span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>            <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5586</span>) <span class="sc">|&gt;</span>                                                              <span class="co">#Remove non-country rows</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">country_name =</span> <span class="fu">str_replace_all</span>(country_name, <span class="fu">c</span>(                      <span class="co">#Rename countries for consistency</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bahamas, The"</span> <span class="ot">=</span> <span class="st">"Bahamas"</span>,</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Congo, Dem. Rep."</span> <span class="ot">=</span> <span class="st">"Congo"</span>,</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Czech Republic"</span> <span class="ot">=</span> <span class="st">"Czechia"</span>,</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Egypt, Arab Rep."</span> <span class="ot">=</span> <span class="st">"Egypt"</span>,</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Gambia, The"</span> <span class="ot">=</span> <span class="st">"Gambia"</span>,</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hong Kong SAR, China"</span> <span class="ot">=</span> <span class="st">"Hong Kong"</span>,</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Korea, Rep."</span> <span class="ot">=</span> <span class="st">"South Korea"</span>,</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Iran, Islamic Rep."</span> <span class="ot">=</span> <span class="st">"Iran"</span>,</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lao PDR"</span> <span class="ot">=</span> <span class="st">"Laos"</span>,</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kyrgyz Republic"</span> <span class="ot">=</span> <span class="st">"Kyrgyzstan"</span>,</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Russian Federation"</span> <span class="ot">=</span> <span class="st">"Russia"</span>,</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Slovak Republic"</span> <span class="ot">=</span> <span class="st">"Slovakia"</span>,</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Syrian Arab Republic"</span> <span class="ot">=</span> <span class="st">"Syria"</span>,</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Turkiye"</span> <span class="ot">=</span> <span class="st">"Turkey"</span>,</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Venezuela, RB"</span> <span class="ot">=</span> <span class="st">"Venezuela"</span>,</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Yemen, Rep."</span> <span class="ot">=</span> <span class="st">"Yemen"</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    ))) <span class="sc">|&gt;</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>country_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Korea, Dem. People's Rep."</span>))                     <span class="co">#Remove repeating country</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="co">#Read data for country water access </span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>water_access <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">"data/drinking_water_access.xlsx"</span>)) <span class="sc">|&gt;</span>          <span class="co">#Load water access data</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(<span class="dv">5</span>),                                                            <span class="co">#Coerce data into numeric</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>            as.numeric,</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>            <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span>                                                              <span class="co">#Clean column names</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(<span class="at">country_name =</span> <span class="st">"geographic_area"</span>,                                    <span class="co">#Select relevant columns</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>           <span class="st">"indicator"</span>, </span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>           <span class="at">year =</span> <span class="st">"time_period"</span>, </span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>           <span class="at">percentage_w_wa =</span> <span class="st">"obs_value"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(indicator <span class="sc">%in%</span> <span class="fu">c</span>(                                                      <span class="co">#Define access to water</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Proportion of population using at least basic drinking water services"</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5363</span>) <span class="sc">|&gt;</span>                                                              <span class="co">#Remove non-country rows</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country_name =</span> <span class="fu">str_replace_all</span>(country_name, <span class="fu">c</span>(                        <span class="co">#Rename countries for consistency</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Democratic Republic of the Congo"</span> <span class="ot">=</span> <span class="st">"Congo"</span>,</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Viet Nam"</span> <span class="ot">=</span> <span class="st">"Vietnam"</span>,</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Democratic People's Republic of Korea"</span> <span class="ot">=</span> <span class="st">"South Korea"</span>,</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>    <span class="st">"China, Hong Kong Special Administrative Region"</span> <span class="ot">=</span> <span class="st">"Hong Kong"</span>,</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lao People's Democratic Republic"</span> <span class="ot">=</span> <span class="st">"Laos"</span>,</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Republic of Moldova"</span> <span class="ot">=</span> <span class="st">"Moldova"</span>,</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Russian Federation"</span> <span class="ot">=</span> <span class="st">"Russia"</span>,</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Syrian Arab Republic"</span> <span class="ot">=</span> <span class="st">"Syria"</span>,</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>    <span class="st">"United Republic of Tanzania"</span> <span class="ot">=</span> <span class="st">"Tanzania"</span>,</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>    <span class="st">"The Republic of Turkey"</span> <span class="ot">=</span> <span class="st">"Turkey"</span>,</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Venezuela (Bolivarian Republic of)"</span> <span class="ot">=</span> <span class="st">"Venezuela"</span>,</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Virgin Islands U.S."</span> <span class="ot">=</span> <span class="st">"Virgin Islands (U.S.)"</span>))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Q1: What data are you using?</strong> I will be using data on countries’ water access and countries’ GDP.</p>
+<p><strong>Q2: Where are the data from?</strong> The data on countries’ water access is from UNICEF, while the data on countries’ GDP and population are from The World Bank.</p>
+<p><strong>Q3: Using these data, what figures will you make?</strong> My first plot will be a time series analysis of countries by their GDP and access to drinking water. Both data tables have data on countries from the years 1988 to 2017. My vision for the first plot is to graph “country GDP” by “proportion of population with access to basic drinking water” in a scatter plot, labeling each dot representing the country. For the time series aspect, I am hoping to make multiple plots to form an animation that shows how access to drinking water changes over the years along with a country’s GDP.</p>
+<p><strong>Q4: What is the main point of each of your figures?</strong> The main point of my first figure is to observe if and how water access correlates to country GDP.</p>
+<p><strong>Q5: Why did you choose the data that you chose? Why did you choose the topic that you choose?</strong> I chose data from UNICEF because it was readily available and easy to query. The UNICEF website had options for me to choose what definitions of “access to water” I wanted, as well as what countries and years I wanted data from. For data on countries’ wealth, I chose data from the World Bank because although other websites had data on countries’ GDP, The World Bank was the only one I found find that was not only downloadable onto Excel, but also had data on the countries’ GDP per capita throughout time. I chose this topic because I thought it would be interesting to see if GDP does correlate with improved water access, as people in nations often don’t gain access to the growing wealth of their countries.</p>
+<p><strong>Q6: In what ways are you hoping this project challenges you?</strong> I am hoping this project challenges me to improve my debugging, documentation interpretation, and Google searching skills when it comes to coding. I foresee challenges in meshing my two data tables, since they are formatted very differently. I also foresee challenges with making the animation and graph aesthetically appealing when there are so many variables to depict.</p>
+</section>
+<section id="step-3-organize-data-for-plot-1-drinking-water-access-vs-gdp-per-capita" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-organize-data-for-plot-1-drinking-water-access-vs-gdp-per-capita">Step #3: Organize data for Plot 1: Drinking Water Access vs GDP per Capita</h4>
+<div class="cell" data-errors="false">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Find mismatched names that will affect inner join with data </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mismatch_names <span class="ot">&lt;-</span> <span class="fu">full_join</span>(pop, GDP, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"country_name"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span>        <span class="co">#Full join pop and GDP</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">"series_name.x"</span>, <span class="st">"series_name.y"</span>)) <span class="sc">|&gt;</span>                               <span class="co">#Remove unnecessary columns</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(water_access, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"year"</span>, <span class="st">"country_name"</span>)) <span class="sc">|&gt;</span>                                  <span class="co">#Full join data with water_access</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">"indicator"</span>)) <span class="sc">|&gt;</span>                                                    <span class="co">#Remove unnecessary column</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(continent,                                                          <span class="co">#Full join data with continent</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"country_name"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"income|dividend|Europe|IDA|Saint|Asia|East|Sint Maarten|union|French|Island|Region|Samoa|Bonaire|mall"</span>,  <span class="co">#Filter out rows containing common strings</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                country_name)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>country_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Africa Western and Central"</span>,                     <span class="co">#Filter out specific strings</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Arab World"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Andorra"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Anguilla"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Australia and New Zealand"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Congo, Rep."</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Euro area"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Fragile and conflict affected situations"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Guadeloupe"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Heavily indebted poor countries (HIPC)"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"IBRD only"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Landlocked developing countries (LLDCs)"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Latin America &amp; Caribbean"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Latin America &amp; the Caribbean"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Latin America and Caribbean"</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Least developed countries: UN classification"</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Least developed countries"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Martinique"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Mayotte"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Montserrat"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Niue"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"North America"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Not classified"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Oceania excluding Australia and New Zealand"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"OECD members"</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Republic of Korea"</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"San Marino"</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"SDG regions - Global"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Sub-Saharan Africa"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"World"</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Africa"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Americas"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Taiwan"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Tokelau"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Wallis and Futuna"</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"West and Central Africa"</span>,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"West Bank and Gaza"</span>,</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Western Pacific"</span>)) </span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co">#Find countries with full data for every year 2000-2020</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>full_country_data <span class="ot">&lt;-</span> mismatch_names <span class="sc">|&gt;</span>                                          <span class="co">#Load mismatch_names </span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>() <span class="sc">|&gt;</span>                                                                  <span class="co">#Omit rows with na</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(<span class="dv">2</span>),                                                            <span class="co">#Coerce year into integer</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>            as.integer,</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>            <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country_name) <span class="sc">|&gt;</span>                                                     <span class="co">#Group by country name</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize_at</span>(<span class="dv">1</span>, sum, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span>                                         <span class="co">#Sum up years</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span>                                                                  <span class="co">#Ungroup</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>year <span class="sc">&lt;</span> <span class="dv">42210</span>)                                                         <span class="co">#Select countries with complete data for all years </span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>final_df <span class="ot">&lt;-</span> mismatch_names <span class="sc">|&gt;</span>                                                   <span class="co">#Load mismatch_names</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(full_country_data,                                                 <span class="co">#Inner join with countries with full data</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>             <span class="at">by =</span> <span class="st">"country_name"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(country_name,                                                        <span class="co">#Select relevant columns</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>           <span class="at">year =</span> <span class="st">"year.x"</span>,</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>           population,</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>           GDP_per_capita_USD,</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>           percentage_w_wa,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>           continent)) <span class="sc">|&gt;</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>),                                                          <span class="co">#Coerce data into numerics</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>            as.numeric,</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>            <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(<span class="dv">2</span>),                                                            <span class="co">#Coerce year into integer</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>            as.integer,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>            <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-4-plot-timeseries-ggplot" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-plot-timeseries-ggplot">Step #4: Plot timeseries ggplot</h4>
+<div class="cell" data-errors="false">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>final <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span>                                                             <span class="co">#Create ggplot</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(                                                                   <span class="co">#Create point plot</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> final_df,                                                            <span class="co">#Load final_df</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> GDP_per_capita_USD,                                                 <span class="co">#Set aesthetics</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> percentage_w_wa,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> population<span class="sc">/</span><span class="dv">1000000</span>,                                                  <span class="co">#Turn point into bubble plot</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> continent),                                                        <span class="co">#Sort continents by color</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span>                                                              <span class="co">#Make bubbles opaque</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_time</span>(year) <span class="sc">+</span>                                                       <span class="co">#Change data by years</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(                                                                   <span class="co">#Edit population legend</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">range =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">20</span>),                                                            <span class="co">#Set scale of bubble size</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Population"</span>,                                                        <span class="co">#Rename population legend</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">250</span>, <span class="dv">500</span>, <span class="dv">1000</span>),                                                 <span class="co">#Change to 3 breaks</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"250 million"</span>, <span class="st">"500 million"</span>, <span class="st">"1000 million"</span>)) <span class="sc">+</span>                 <span class="co">#Add "million" to legend</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_discrete</span>(                                                        <span class="co">#Edit continent legend</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Continents"</span>) <span class="sc">+</span>                                                             <span class="co">#Capitalize continents</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(                                                                         <span class="co">#Edit labels</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">" Drinking Water Access vs GDP per Capita"</span>,                      <span class="co">#Add title</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"          Year: {frame_time}"</span>,                               <span class="co">#Add subtitle</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"GDP per capita (US Dollars)"</span>,                                       <span class="co">#Label x axis</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Percentage of population with access to drinking water"</span>,            <span class="co">#Label y axis</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">""</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Figure 1: Percentage of country population with access to drinking water by GDP per capita. Data from UNICEF and The World Bank."</span>) <span class="sc">+</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span>                                                             <span class="co">#Use classic theme</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(                                                                        <span class="co">#Edit plot theme</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">30</span>),       </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.05</span>, </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">1.3</span>, <span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.caption.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray71"</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>,</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">size =</span> <span class="dv">25</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray71"</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray71"</span>, <span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">22</span>),</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">linetype =</span> <span class="st">"solid"</span>, <span class="at">color =</span> <span class="st">"lightgrey"</span>),</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">linetype =</span> <span class="st">"longdash"</span>, <span class="at">color =</span> <span class="st">"lightgrey"</span>)) <span class="sc">+</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">7</span>, <span class="at">shape =</span> <span class="dv">15</span>),        <span class="co">#Set size and shape of legend continent bubble</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>                              <span class="at">color =</span> <span class="st">"lightgrey"</span>)) <span class="sc">+</span>   </span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(                                                                <span class="co">#Make data more spread out via x axis</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">300</span>, <span class="dv">1000</span>, <span class="dv">3000</span>, <span class="dv">10000</span>, <span class="dv">30000</span>, <span class="dv">100000</span>),                 <span class="co">#Evenly space ticks</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"$100"</span>, <span class="st">"$300"</span>, <span class="st">"$1,000"</span>, <span class="st">"$3,000"</span>, <span class="st">"$10,000"</span>,               <span class="co">#Add $ and commas to axis label</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"$30,000"</span>, <span class="st">"$100,000"</span>)) <span class="sc">+</span> </span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(                                                           <span class="co">#Make continuous y axis</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">60</span>, <span class="dv">80</span>, <span class="dv">100</span>),</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"20%"</span>, <span class="st">"40%"</span>, <span class="st">"60%"</span>, <span class="st">"80%"</span>, <span class="st">"100%"</span>)) </span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="fu">animate</span>(                                                                        <span class="co">#Create animation</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>        final, <span class="at">nframes =</span> <span class="dv">90</span>,                                                    <span class="co">#Set number of frames</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>        <span class="at">renderer =</span> <span class="fu">gifski_renderer</span>(<span class="st">"GDP_water_access.gif"</span>),                     <span class="co">#Name gif</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        <span class="at">height =</span> <span class="dv">780</span>, <span class="at">width =</span> <span class="dv">1000</span>)                                             <span class="co">#Set dimensions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Nguyen_Stephanie_final_project_files/figure-html/unnamed-chunk-3-1.gif" class="img-fluid"></p>
+</div>
+</div>
+<p><strong>Q1: What is the take home message of this figure?</strong> The take home message of this figure is that country GDP tends to be correlated with access to drinking water. The graph implies a positive relationship between country per capita wealth and the percentage of the population with drinking water.</p>
+<p><strong>Q2: What is the most (or least) surprising?</strong> The most surprising thing to me was the wealth gap between countries. Initially, without the log scale, I could barely tell what was going on in the data; all the poor countries were clustered on the y axis, while the richer countries were clustered at the top of the graph. Another surprising observation was how the country’s continent appears to be highly associated with its assess to drinking water. Even for countries of similar GDP’s, African countries tend to have less access to drinking water than its Asian or American equivalent.</p>
+<p><strong>Q3: What three new functions did you implement to support visualization of the data? Explain what each of them does.</strong> (1) I learned the scale_x_log10() function, which sets the x axis to a log scale instead of a continuous scale. This aided in the data visualization because the wealth gap between countries is so great that all the data would be clustered either on the y axis or the top of the graph if it was on a regular x axis. Thus, the log scale allows us to see the spread of the data better. (2) I also learned the animate() function, which allows you to make a gif of the plot, and the transition_time() function, that allowed me to animate the plot based on changing years, so you can see how countries’ access to drinking water and GDP change year by year. (3) In terms of data cleaning, the na.omit() function was useful in filtering out countries with missing data. If a country had missing data, it would appear and/or disappear at random points on the animation, so to avoid a visual confusing, I used na.omit() to take out countries with missing data. I also learned the distinct() function that allowed me to filter out repeating rows and the full_join() function that allowed me to join all the data together and see what rows had missing data at the bottom of the dataframe.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
